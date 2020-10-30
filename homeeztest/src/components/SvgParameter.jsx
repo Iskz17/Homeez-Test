@@ -9,7 +9,7 @@ class SvgParameter extends Component {
       <svg
         id={this.props.data.id}
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="-50 -50 100 100"
+        viewBox="0 0 841.9 595.3"
       >
         {/* <g fill="#61DAFB"> */}
         {this.determineParam()}

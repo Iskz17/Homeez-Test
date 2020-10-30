@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import FurnitureSVG from 'public/furniture-sample.svg'
+
 class ButtonFurniture extends Component {
     constructor(props) {
         super(props);
@@ -6,7 +8,7 @@ class ButtonFurniture extends Component {
     }
     render() { 
         return (  <div>
-            
+                <img src={FurnitureSVG}></img>
         </div>);
     }
 }
