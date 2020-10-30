@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import floor from './components/floorplan-sample.json';
 import Layouts from './components/Layouts';
+import ButtonFurniture from './components/ButtonFurniture';
 
 class App extends Component {
   constructor(props) {
@@ -10,9 +11,11 @@ class App extends Component {
     }
   }
   render() { 
-    return (  <React.Fragment>
+    return (  
+    <div>
           <Layouts floorData={floor}/>
-    </React.Fragment>);
+          <ButtonFurniture/>
+    </div>);
   }
 }
  
