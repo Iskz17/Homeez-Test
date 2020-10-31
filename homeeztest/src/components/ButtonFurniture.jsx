@@ -6,9 +6,19 @@ class ButtonFurniture extends Component {
         super(props);
         this.state = {  }
     }
+    toShowSVG(){
+        if(this.props.showPicture){
+            //console.log('was here');
+            return <img src={FurnitureSVG}></img>;
+        }
+    }
     render() { 
         return (  <div>
-                <img src={FurnitureSVG}></img>
+                <button onClick={()=> this.props.onClick('hewo')}> 
+                Load
+                </button>
+                {this.toShowSVG()}
+                
         </div>);
     }
 }

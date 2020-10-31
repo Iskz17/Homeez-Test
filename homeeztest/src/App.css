@@ -41,6 +41,14 @@ svg{
   height: 10%;
   width: 10%;
   border: 2px solid red;
+  background: green;
+}
+
+polygon{
+fill: blue;
+}
+path{
+  fill: yellow;
 }
 .containerMain{
   position: relative;
