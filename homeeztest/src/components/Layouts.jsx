@@ -18,7 +18,7 @@ class Layouts extends Component {
   render() {
     return (
       <div>
-        {this.props.floorData.layout.map((l) => (
+        {this.props.floorData.map((l) => (
           // console.log(l.id),
           <Layout key={this.getUniqueId(l)} id={this.getUniqueId(l)} data={l} />
         ))}

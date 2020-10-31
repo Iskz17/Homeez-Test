@@ -19,11 +19,25 @@ class App extends Component {
     this.setState({toShowPicture});
     //return <img src={FurnitureSVG}></img>;
   }
+  filterFloorData(){
+    let tempFloor = [...floor.layout];
+    let newFloor = tempFloor.filter((c) => !(c.id).toString().includes('-wall'))
+    //console.log(newFloor);
+    return newFloor;
+  }
   render() { 
     return (  
     <div className="containerMain">
-          <Layouts floorData={floor}/>
+      <div className="floorDisplayContainer">
+        <div className="floorDisplayLabelContainer">
+          <span>This is the floor plan</span>
+        </div>
+        <div className="theFloorPlan">
+        <Layouts floorData={this.filterFloorData()}/>
+          {/* {this.filterFloorData()} */}
           <ButtonFurniture onClick={this.handleLoadButton} showPicture={this.state.toShowPicture}/>
+        </div>        
+      </div>      
     </div>);
   }
 }

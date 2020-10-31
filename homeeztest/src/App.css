@@ -1,60 +1,123 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 svg{
   position: relative;
-  height: 10%;
-  width: 10%;
-  border: 2px solid red;
-  background: green;
+  height: 100%;
+  width: 100%;
+  /* border: 2px solid red; */
+  filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.5));
+  /* background: green; */
 }
 
 polygon{
-fill: blue;
+fill: white;
+stroke: red;
+stroke-width: 4px
 }
 path{
   fill: yellow;
 }
 .containerMain{
   position: relative;
+  display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-content: center;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  background: green;
+}
+.floorDisplayContainer{
+  position: relative;
+  width: 60%;
+  height: 60%;
+  background: white;
+  background-image: linear-gradient(45deg,rgb(116, 226, 217) 0%, rgb(229, 221, 149) 100%);
+  border-radius: 15px;
+}
+.floorDisplayLabelContainer{
+  width:100%;
+  position: relative;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: white; */
+}
+.theFloorPlan{
+  width: 100%;
+  height: 95%;
+  /* background: pink; */
+  position: relative;
+}
+.layoutSVG{
+  position:absolute;
+}
+#living-room_div{
+  height: 100%;
+  width: 65%;
+  /* border: 1px solid red; */
+  left: 17%;
+}
+#bed-room_div{
+  height: 50%;
+  width: 25%;
+  /* background: yellow; */
+  left: 35%;
+  top: -1%;
+  /* display: none; */
+}
+#aircon-ledge_div{
+  height: 30%;
+  width: 19%;
+  /* background: green; */
+  left: 43.5%;
+  /* display: none; */
+}
+#household-shelter_div{
+/* background: white; */
+width: 40%;
+height: 60%;
+left: 41.5%;
+top: 14%;
+/* display: none; */
+}
+#kitchen_div{
+/* background: purple; */
+height: 70%;
+width: 46%;
+left: 29%;
+top: 21.4%;
+/* display: none; */
+}
+#random-dome_div{
+  /* background: blue; */
+  top: 20%;
+  left: 16%;
+  height: 60%;
+  width: 30%;
+  transform: rotate(180deg)
+  /* display: none; */
+}
+#unhackable-corner_div{
+  /* background: black; */
+  width: 50%;
+  height: 40%;
+  top: 57%;
+  left: 9%;
+  transform: rotate(180deg);
+  /* display: none; */
+}
+#bath_div{
+  /* background: black; */
+  left: 23.4%;
+  height: 60%;
+  width: 50%;
+  /* display:none; */
 }
