@@ -10,6 +10,7 @@ class App extends Component {
     super(props);
     this.state = {  
       toShowPicture: false,
+      buttonText: 'Load'
     }
   }
   handleLoadButton = (test)=>{
@@ -17,6 +18,11 @@ class App extends Component {
     let toShowPicture = !this.state.toShowPicture;
     //console.log(toShowPicture);
     this.setState({toShowPicture});
+    if(toShowPicture){
+      this.setState({buttonText: 'Unload'});
+    }else{
+      this.setState({buttonText: 'Load'});
+    }
     //return <img src={FurnitureSVG}></img>;
   }
   filterFloorData(){
@@ -30,12 +36,16 @@ class App extends Component {
     <div className="containerMain">
       <div className="floorDisplayContainer">
         <div className="floorDisplayLabelContainer">
-          <span>This is the floor plan</span>
+          <span>The Floor Plan</span>
         </div>
         <div className="theFloorPlan">
         <Layouts floorData={this.filterFloorData()}/>
           {/* {this.filterFloorData()} */}
-          <ButtonFurniture onClick={this.handleLoadButton} showPicture={this.state.toShowPicture}/>
+          <ButtonFurniture 
+          onClick={this.handleLoadButton} 
+          showPicture={this.state.toShowPicture} 
+          className="buttonClass"
+          text={this.state.buttonText}/>
         </div>        
       </div>      
     </div>);

@@ -9,14 +9,14 @@ class ButtonFurniture extends Component {
     toShowSVG(){
         if(this.props.showPicture){
             //console.log('was here');
-            return <img src={FurnitureSVG}></img>;
+            return <img src={FurnitureSVG} className="furnitureImg"></img>;
         }
     }
     render() { 
         return (  <div>
-                <button onClick={()=> this.props.onClick('hewo')}> 
-                Load
-                </button>
+                <div onClick={()=> this.props.onClick('hewo')} className={this.props.className}> 
+                {this.props.text}
+                </div>
                 {this.toShowSVG()}
                 
         </div>);
